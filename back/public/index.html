@@ -1,35 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Quiz Arena - Host</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg1: #0b1020;
+      --bg2: #11182e;
+      --card: rgba(255, 255, 255, 0.06);
+      --border: rgba(0, 255, 255, 0.25);
+      --cyan: #00f7ff;
+      --violet: #a855f7;
+      --pink: #ff3cac;
+      --green: #00ff9d;
+      --text: #eaf6ff;
+      --muted: #9fb3c8;
+      --danger: #ff4d6d;
+      --shadow: 0 0 20px rgba(0, 247, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(168, 85, 247, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(0, 247, 255, 0.16), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      padding: 24px;
+    }
+
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: white;
+      text-shadow:
+        0 0 8px var(--cyan),
+        0 0 16px var(--cyan),
+        0 0 32px rgba(0, 247, 255, 0.6);
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .btn-start {
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 0 18px rgba(0, 247, 255, 0.4);
+    }
+
+    .btn-next {
+      background: linear-gradient(90deg, var(--pink), var(--violet));
+      box-shadow: 0 0 18px rgba(255, 60, 172, 0.35);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 24px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .panel-title {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    #playersList {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #playersList li {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 12px 14px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .question-box {
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #questionText {
+      font-size: 2.1rem;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 12px rgba(255,255,255,0.12);
+    }
+
+    #choices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .choice {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 18px;
+      border-radius: 18px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(135deg, rgba(0,247,255,0.12), rgba(168,85,247,0.14));
+      box-shadow: 0 0 16px rgba(0,247,255,0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: popIn 0.35s ease;
+    }
+
+    .choice:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 22px rgba(168, 85, 247, 0.22);
+    }
+
+    #answersInfo {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .timer-bar {
+        width: 100%;
+        height: 12px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 10px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    #timerFill {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #00f7ff, #ff3cac);
+        transition: width linear;
+    }
+
+    .correct {
+        background: rgba(0,255,157,0.2);
+        border: 2px solid #00ff9d;
+        box-shadow: 0 0 20px #00ff9d;
+    }
+
+    .wrong {
+        opacity: 0.4;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      #choices {
+        grid-template-columns: 1fr;
+      }
+
+      #questionText {
+        font-size: 1.6rem;
+      }
+
+      .title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Lobby Quiz</h1>
-    <p>Scanne pour rejoindre :</p>
-    <img src="/qrcode.png" />
+  <div class="wrapper">
+    <h1 class="title">Quiz Arena</h1>
+    <p class="subtitle">Écran principal</p>
 
-    <h2>Joueurs connectés :</h2>
-    <ul id="players"></ul>
+    <div class="topbar">
+      <button id="startBtn" class="btn btn-start">Lancer le quiz</button>
+      <button id="nextBtn" class="btn btn-next" style="display:none;">Question suivante</button>
+    </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
+    <div class="grid">
+      <aside class="panel">
+        <h2 class="panel-title">Joueurs connectés</h2>
+        <ul id="playersList"></ul>
+      </aside>
 
-        socket.on("playersUpdate", (players) => {
-            const list = document.getElementById("players");
-            list.innerHTML = "";
+      <main class="panel question-box">
+        <div>
+          <h2 id="questionText">En attente du lancement...</h2>
+          <div id="choices"></div>
+        </div>
 
-            players.forEach(p => {
-                const li = document.createElement("li");
-                li.textContent = p.name;
-                list.appendChild(li);
-            });
+        <div class="timer-bar">
+            <div id="timerFill"></div>
+        </div>
+
+        <div>
+          <p id="answersInfo">0 réponse reçue</p>
+          <p class="footer-note">Les joueurs répondent depuis leur téléphone</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    const startBtn = document.getElementById("startBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const playersList = document.getElementById("playersList");
+    const questionText = document.getElementById("questionText");
+    const choicesDiv = document.getElementById("choices");
+    const answersInfo = document.getElementById("answersInfo");
+    const timerFill = document.getElementById("timerFill");
+    let timerInterval = null;
+
+    socket.emit("registerHost");
+
+    startBtn.addEventListener("click", () => {
+      socket.emit("startQuiz");
+      startBtn.style.display = "none";
+      nextBtn.style.display = "inline-block";
+    });
+
+    nextBtn.addEventListener("click", () => {
+      socket.emit("nextQuestion");
+    });
+
+    socket.on("playersList", (players) => {
+      playersList.innerHTML = "";
+
+      players.forEach(player => {
+        const li = document.createElement("li");
+        li.textContent = `👾 ${player.name} — ${player.score} pt`;
+        playersList.appendChild(li);
+      });
+    });
+
+   socket.on("newQuestion", (question) => {
+        questionText.textContent = question.question;
+        choicesDiv.innerHTML = "";
+
+        // reset timer
+        clearInterval(timerInterval);
+        timerFill.style.width = "100%";
+
+        let timeLeft = question.duration;
+
+        timerInterval = setInterval(() => {
+            timeLeft -= 100;
+
+            const percent = (timeLeft / question.duration) * 100;
+            timerFill.style.width = percent + "%";
+
+            if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            }
+        }, 100);
+
+        question.choices.forEach((choice, index) => {
+            const div = document.createElement("div");
+            div.className = "choice";
+            div.dataset.index = index;
+            div.textContent = choice;
+            choicesDiv.appendChild(div);
         });
-    </script>
-</body>
+    });
 
+    socket.on("answersCount", ({ totalPlayers, totalAnswers }) => {
+      answersInfo.textContent = `${totalAnswers} / ${totalPlayers} réponse(s) reçue(s)`;
+    });
+
+    socket.on("revealAnswer", ({ correctIndex, players }) => {
+        clearInterval(timerInterval);
+
+        document.querySelectorAll(".choice").forEach(el => {
+            const i = Number(el.dataset.index);
+
+            if (i === correctIndex) {
+            el.classList.add("correct");
+            } else {
+            el.classList.add("wrong");
+            }
+        });
+    });
+
+    socket.on("quizEnded", (players) => {
+      questionText.textContent = "Quiz terminé !";
+      choicesDiv.innerHTML = "";
+
+      const classement = [...players].sort((a, b) => b.score - a.score);
+      answersInfo.innerHTML =
+        "<strong>Classement final</strong><br><br>" +
+        classement.map((p, i) => `${i + 1}. ${p.name} — ${p.score} pt`).join("<br>");
+
+      nextBtn.style.display = "none";
+      startBtn.style.display = "inline-block";
+    });
+  </script>
+</body>
 </html>

@@ -1,31 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Quiz Arena - Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg1: #0a0f1f;
+      --bg2: #131c35;
+      --cyan: #00f7ff;
+      --violet: #9b5cff;
+      --pink: #ff3cac;
+      --green: #00ff9d;
+      --text: #f3faff;
+      --muted: #a9bbcf;
+      --card: rgba(255,255,255,0.07);
+      --border: rgba(0,247,255,0.24);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(155, 92, 255, 0.20), transparent 25%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 460px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 22px rgba(0,247,255,0.16);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px rgba(0,247,255,0.5);
+    }
+
+    .sub {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    #joinArea {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.08);
+      color: white;
+    }
+
+    input::placeholder {
+      color: #b4c3d3;
+    }
+
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    #joinBtn {
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 0 16px rgba(0,247,255,0.22);
+    }
+
+    #questionText {
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 18px 0;
+      line-height: 1.3;
+    }
+
+    #choices {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    #choices button {
+      background: linear-gradient(135deg, rgba(0,247,255,0.18), rgba(255,60,172,0.22));
+      border: 1px solid rgba(255,255,255,0.1);
+      min-height: 64px;
+      box-shadow: 0 0 12px rgba(0,247,255,0.12);
+    }
+
+    #choices button:disabled {
+      opacity: 0.55;
+      background: rgba(255,255,255,0.08);
+      box-shadow: none;
+    }
+
+    #status {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--green);
+      font-weight: bold;
+      min-height: 24px;
+    }
+
+    .waiting {
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .ranking {
+        font-size: 1.4rem;
+        justify-content: space-between;
+        display: flex;
+        padding: 18px 24px;
+        background: linear-gradient(90deg, rgba(0,247,255,0.2), rgba(168,85,247,0.2));
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Rejoindre le quiz</h1>
+  <div class="app">
+    <h1>Quiz Arena</h1>
+    <p class="sub">Téléphone joueur</p>
 
-    <input id="name" placeholder="Ton pseudo" />
-    <button onclick="join()">Rejoindre</button>
+    <div id="joinArea">
+      <input type="text" id="playerName" placeholder="Entre ton pseudo" />
+      <button id="joinBtn">Rejoindre la partie</button>
+    </div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
+    <h2 id="questionText">En attente d'une question...</h2>
+    <div id="choices"></div>
+    <p id="status" class="waiting"></p>
+  </div>
 
-        function join() {
-            const name = document.getElementById("name").value;
-            if (!name) return;
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
 
-            socket.emit("joinLobby", name);
+    const playerNameInput = document.getElementById("playerName");
+    const joinBtn = document.getElementById("joinBtn");
+    const questionText = document.getElementById("questionText");
+    const choicesDiv = document.getElementById("choices");
+    const status = document.getElementById("status");
 
-            document.body.innerHTML = "<h2>En attente du quiz...</h2>";
-        }
-    </script>
+    let currentQuestion = null;
+    let hasAnswered = false;
+
+    joinBtn.addEventListener("click", () => {
+      const name = playerNameInput.value.trim();
+      socket.emit("registerPlayer", name);
+      document.getElementById("joinArea").style.display = "none";
+      status.textContent = "Connecté au quiz";
+    });
+
+    socket.on("registered", (player) => {
+      status.textContent = `Bienvenue ${player.name}`;
+    });
+
+    socket.on("newQuestion", (question) => {
+      currentQuestion = question;
+      hasAnswered = false;
+
+      questionText.textContent = question.question;
+      choicesDiv.innerHTML = "";
+      status.textContent = "Choisis ta réponse";
+
+      question.choices.forEach((choice, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = choice;
+
+        btn.addEventListener("click", () => {
+          if (hasAnswered) return;
+
+          socket.emit("submitAnswer", {
+            questionId: question.id,
+            choiceIndex: index
+          });
+
+          hasAnswered = true;
+          status.textContent = "Réponse envoyée !";
+
+          document.querySelectorAll("#choices button").forEach(b => {
+            b.disabled = true;
+          });
+        });
+
+        choicesDiv.appendChild(btn);
+      });
+    });
+
+    socket.on("revealAnswer", ({ correctIndex }) => {
+        document.querySelectorAll("#choices button").forEach((btn, index) => {
+            if (index === correctIndex) {
+            btn.style.background = "green";
+            } else {
+            btn.style.opacity = "0.4";
+            }
+        });
+
+        status.textContent = "Réponse affichée !";
+    });
+
+   socket.on("quizEnded", (players) => {
+        questionText.textContent = "🏆 Classement final";
+        choicesDiv.innerHTML = "";
+
+        const classement = [...players].sort((a, b) => b.score - a.score);
+
+        choicesDiv.innerHTML = classement.map((p, i) => {
+            const medals = ["🥇", "🥈", "🥉"];
+            const medal = medals[i] || "🎯";
+
+            return `
+            <div class="choice ranking">
+                <span>${medal}</span>
+                ${p.name} — ${p.score} pts
+            </div>
+            `;
+        }).join("");
+    });
+  </script>
 </body>
-
 </html>
