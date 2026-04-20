@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lobby Quiz</h1>
+    <p>Scanne pour rejoindre :</p>
+    <img src="/qrcode.png" />
+
+    <h2>Joueurs connectés :</h2>
+    <ul id="players"></ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        socket.on("playersUpdate", (players) => {
+            const list = document.getElementById("players");
+            list.innerHTML = "";
+
+            players.forEach(p => {
+                const li = document.createElement("li");
+                li.textContent = p.name;
+                list.appendChild(li);
+            });
+        });
+    </script>
+</body>
+
+</html>

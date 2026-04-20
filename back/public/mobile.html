@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Rejoindre le quiz</h1>
+
+    <input id="name" placeholder="Ton pseudo" />
+    <button onclick="join()">Rejoindre</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function join() {
+            const name = document.getElementById("name").value;
+            if (!name) return;
+
+            socket.emit("joinLobby", name);
+
+            document.body.innerHTML = "<h2>En attente du quiz...</h2>";
+        }
+    </script>
+</body>
+
+</html>
