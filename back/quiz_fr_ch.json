@@ -1,0 +1,1757 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Science : Mathématiques",
+        "zh": "科学：数学"
+      },
+      "question": {
+        "fr": "Quel est le premier exposant premier de Mersenne supérieur à 1000 ?",
+        "zh": "第一个大于1000的梅森素数指数是多少？"
+      },
+      "correct_answer": {
+        "fr": "1279",
+        "zh": "1279"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "2203",
+          "zh": "2203"
+        },
+        {
+          "fr": "1009",
+          "zh": "1009"
+        },
+        {
+          "fr": "1069",
+          "zh": "1069"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Dessins animés et animations",
+        "zh": "娱乐：动画"
+      },
+      "question": {
+        "fr": "Bugs Bunny, Tony le Tigre et d'autres personnages animaux bipèdes sont appelés quel type de personnage ?",
+        "zh": "像兔八哥、东尼虎等双足动物角色被称为什么类型的角色？"
+      },
+      "correct_answer": {
+        "fr": "Anthropomorphe",
+        "zh": "拟人化"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Anthropolegique",
+          "zh": "Anthropolegic"
+        },
+        {
+          "fr": "Anthrologique",
+          "zh": "Anthrologic"
+        },
+        {
+          "fr": "Anthrogénétique",
+          "zh": "Anthrogenetic"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Culture générale",
+        "zh": "常识"
+      },
+      "question": {
+        "fr": "Lequel de ces mots désigne quelque chose fabriqué, distribué ou vendu illégalement ?",
+        "zh": "以下哪个词指非法制作、分发或销售的东西？"
+      },
+      "correct_answer": {
+        "fr": "Contrefaçon",
+        "zh": "盗版品"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Cireur de bottes",
+          "zh": "擦鞋工"
+        },
+        {
+          "fr": "Lacet de botte",
+          "zh": "靴带"
+        },
+        {
+          "fr": "Amorçage",
+          "zh": "引导程序"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Comics",
+        "zh": "娱乐：漫画"
+      },
+      "question": {
+        "fr": "Qui a écrit la série de comics Batman « The Killing Joke » ?",
+        "zh": "谁创作了蝙蝠侠漫画《致命玩笑》？"
+      },
+      "correct_answer": {
+        "fr": "Alan Moore",
+        "zh": "Alan Moore"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Bill Finger",
+          "zh": "Bill Finger"
+        },
+        {
+          "fr": "Frank Miller",
+          "zh": "Frank Miller"
+        },
+        {
+          "fr": "Jerry Siegel",
+          "zh": "Jerry Siegel"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Pourquoi le personnage Trevor Philips a-t-il été renvoyé de l'armée de l'air ?",
+        "zh": "角色 Trevor Philips 为什么被空军开除？"
+      },
+      "correct_answer": {
+        "fr": "Problèmes de santé mentale",
+        "zh": "心理健康问题"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Blessures",
+          "zh": "受伤"
+        },
+        {
+          "fr": "Maladie",
+          "zh": "疾病"
+        },
+        {
+          "fr": "Danger pour les autres",
+          "zh": "对他人构成危险"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Science : Gadgets",
+        "zh": "科学：电子产品"
+      },
+      "question": {
+        "fr": "Sur quel iPhone l’assistant vocal Siri d’Apple a-t-il fait ses débuts ?",
+        "zh": "苹果语音助手 Siri 首次出现在那一款 iPhone 上？"
+      },
+      "correct_answer": {
+        "fr": "iPhone 4S",
+        "zh": "iPhone 4S"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "iPhone 6S",
+          "zh": "iPhone 6S"
+        },
+        {
+          "fr": "iPhone 3GS",
+          "zh": "iPhone 3GS"
+        },
+        {
+          "fr": "iPhone 5S",
+          "zh": "iPhone 5S"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Dans Left 4 Dead, quel est le nom de famille du personnage Bill ?",
+        "zh": "在《Left 4 Dead》中，角色 Bill 的姓是什么？"
+      },
+      "correct_answer": {
+        "fr": "Overbeck",
+        "zh": "Overbeck"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Fish",
+          "zh": "Fish"
+        },
+        {
+          "fr": "Roberts",
+          "zh": "Roberts"
+        },
+        {
+          "fr": "Stevenson",
+          "zh": "Stevenson"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quel a été le premier appareil de jeu portable au monde ?",
+        "zh": "世界上第一款掌上游戏设备是什么？"
+      },
+      "correct_answer": {
+        "fr": "Mattel Auto Race",
+        "zh": "Mattel Auto Race"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Game Boy",
+          "zh": "Game Boy"
+        },
+        {
+          "fr": "Microvision",
+          "zh": "Microvision"
+        },
+        {
+          "fr": "Game & Watch",
+          "zh": "Game & Watch"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Musique",
+        "zh": "娱乐：音乐"
+      },
+      "question": {
+        "fr": "Le groupe HEALTH s'appelle HEALTH parce qu'il voulait choisir un mot du quotidien comme nom de groupe.",
+        "zh": "乐队 HEALTH 之所以叫 HEALTH，是因为他们想用一个日常词汇作为乐队名。"
+      },
+      "correct_answer": {
+        "fr": "Vrai",
+        "zh": "正确"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Faux",
+          "zh": "错误"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Animaux",
+        "zh": "动物"
+      },
+      "question": {
+        "fr": "Les zèbres sont blancs avec des rayures noires.",
+        "zh": "斑马是白底黑条纹。"
+      },
+      "correct_answer": {
+        "fr": "Faux",
+        "zh": "错误"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Vrai",
+          "zh": "正确"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Célébrités",
+        "zh": "名人"
+      },
+      "question": {
+        "fr": "Sur quoi le réalisateur Dan Bell concentre-t-il généralement ses films ?",
+        "zh": "电影制作人 Dan Bell 的作品通常聚焦于什么？"
+      },
+      "correct_answer": {
+        "fr": "Bâtiments abandonnés et centres commerciaux à l'abandon",
+        "zh": "废弃建筑和荒废的购物中心"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Monuments historiques",
+          "zh": "历史地标"
+        },
+        {
+          "fr": "Films d'action",
+          "zh": "动作片"
+        },
+        {
+          "fr": "Documentaires",
+          "zh": "纪录片"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quel était le nom de code de la « Nintendo GameCube » ?",
+        "zh": "“Nintendo GameCube”的代号是什么？"
+      },
+      "correct_answer": {
+        "fr": "Dolphin",
+        "zh": "Dolphin"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Nitro",
+          "zh": "Nitro"
+        },
+        {
+          "fr": "Revolution",
+          "zh": "Revolution"
+        },
+        {
+          "fr": "Atlantis",
+          "zh": "Atlantis"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quel était le nom original de Crash Bandicoot ?",
+        "zh": "Crash Bandicoot 最初的名字是什么？"
+      },
+      "correct_answer": {
+        "fr": "Willie Wombat",
+        "zh": "Willie Wombat"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Coco Bandicoot",
+          "zh": "Coco Bandicoot"
+        },
+        {
+          "fr": "Marvelous Mole",
+          "zh": "Marvelous Mole"
+        },
+        {
+          "fr": "Wally Wombat",
+          "zh": "Wally Wombat"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Histoire",
+        "zh": "历史"
+      },
+      "question": {
+        "fr": "Quel bâtiment a été incendié le 24 août 1812 ?",
+        "zh": "哪座建筑于 1812 年 8 月 24 日被纵火焚烧？"
+      },
+      "correct_answer": {
+        "fr": "La Maison-Blanche",
+        "zh": "白宫"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Bâtiment du Parlement",
+          "zh": "议会大厦"
+        },
+        {
+          "fr": "Bâtiment de la Grande Assemblée nationale",
+          "zh": "大国民议会大厦"
+        },
+        {
+          "fr": "Palais de la Nation",
+          "zh": "国家宫"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Histoire",
+        "zh": "历史"
+      },
+      "question": {
+        "fr": "Quel fusil d'assaut automatique russe à emprunt de gaz a été développé en Union soviétique en 1947 et est encore couramment utilisé aujourd'hui ?",
+        "zh": "哪一种采用导气式自动原理的俄罗斯突击步枪于 1947 年在苏联研制，并且今天仍被广泛使用？"
+      },
+      "correct_answer": {
+        "fr": "AK-47",
+        "zh": "AK-47"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "RPK",
+          "zh": "RPK"
+        },
+        {
+          "fr": "M16",
+          "zh": "M16"
+        },
+        {
+          "fr": "MG 42",
+          "zh": "MG 42"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Laquelle de ces fonctionnalités a été ajoutée dans le jeu « Heretic » de 1994, alors que le « DOOM » original ne pouvait pas l'ajouter en raison de limitations ?",
+        "zh": "以下哪项功能是在 1994 年游戏《Heretic》中加入的，而原版《DOOM》因限制无法加入？"
+      },
+      "correct_answer": {
+        "fr": "Regarder vers le haut et vers le bas",
+        "zh": "向上和向下看"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Taille des salles augmentée",
+          "zh": "更大的房间"
+        },
+        {
+          "fr": "Armes illimitées",
+          "zh": "无限武器"
+        },
+        {
+          "fr": "Textures très détaillées",
+          "zh": "高精细纹理"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Mythologie",
+        "zh": "神话"
+      },
+      "question": {
+        "fr": "Hel était la fille de quelle figure de la mythologie nordique ?",
+        "zh": "海拉是北欧神话中哪位人物的女儿？"
+      },
+      "correct_answer": {
+        "fr": "Loki",
+        "zh": "Loki"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Thor",
+          "zh": "Thor"
+        },
+        {
+          "fr": "Odin",
+          "zh": "Odin"
+        },
+        {
+          "fr": "Balder",
+          "zh": "Balder"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Comics",
+        "zh": "娱乐：漫画"
+      },
+      "question": {
+        "fr": "Dans les comics Batman, sous quel autre nom le méchant Dr Jonathan Crane est-il connu ?",
+        "zh": "在蝙蝠侠漫画中，反派 Jonathan Crane 博士的另一个名字是什么？"
+      },
+      "correct_answer": {
+        "fr": "Épouvantail",
+        "zh": "稻草人"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Bane",
+          "zh": "Bane"
+        },
+        {
+          "fr": "Calendar Man",
+          "zh": "Calendar Man"
+        },
+        {
+          "fr": "Clayface",
+          "zh": "Clayface"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quel est le nom de l'île principale dans PLAYERUNKNOWN'S BATTLEGROUNDS ?",
+        "zh": "《PLAYERUNKNOWN'S BATTLEGROUNDS》的主岛叫什么名字？"
+      },
+      "correct_answer": {
+        "fr": "Erangel",
+        "zh": "Erangel"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Marmara",
+          "zh": "Marmara"
+        },
+        {
+          "fr": "Severny",
+          "zh": "Severny"
+        },
+        {
+          "fr": "Lastovo",
+          "zh": "Lastovo"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Histoire",
+        "zh": "历史"
+      },
+      "question": {
+        "fr": "Sargon II, roi de l'Empire néo-assyrien, était un descendant direct de Sargon d'Akkad.",
+        "zh": "新亚述帝国国王萨尔贡二世是阿卡德的萨尔贡的直系后裔。"
+      },
+      "correct_answer": {
+        "fr": "Faux",
+        "zh": "错误"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Vrai",
+          "zh": "正确"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Divertissement : Anime et manga japonais",
+        "zh": "娱乐：日本动漫与漫画"
+      },
+      "question": {
+        "fr": "Quel nom est donné au personnage principal Chihiro dans le film « Le Voyage de Chihiro » de 2001 ?",
+        "zh": "在 2001 年电影《千与千寻》中，主角千寻被取了什么名字？"
+      },
+      "correct_answer": {
+        "fr": "Sen (mille)",
+        "zh": "千"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Hyaku (cent)",
+          "zh": "百"
+        },
+        {
+          "fr": "Ichiman (dix mille)",
+          "zh": "一万"
+        },
+        {
+          "fr": "Juu (dix)",
+          "zh": "十"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Science : Mathématiques",
+        "zh": "科学：数学"
+      },
+      "question": {
+        "fr": "Au nombre entier le plus proche, combien de radians y a-t-il dans un cercle complet ?",
+        "zh": "四舍五入到最接近的整数，一个整圆有多少弧度？"
+      },
+      "correct_answer": {
+        "fr": "6",
+        "zh": "6"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "3",
+          "zh": "3"
+        },
+        {
+          "fr": "4",
+          "zh": "4"
+        },
+        {
+          "fr": "5",
+          "zh": "5"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Sports",
+        "zh": "体育"
+      },
+      "question": {
+        "fr": "Laquelle de ces équipes nationales s'est qualifiée pour la Coupe du monde de la FIFA 2018 en Russie ?",
+        "zh": "以下哪个国家队晋级了 2018 年俄罗斯世界杯？"
+      },
+      "correct_answer": {
+        "fr": "Tunisie",
+        "zh": "突尼斯"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "États-Unis",
+          "zh": "美国"
+        },
+        {
+          "fr": "Italie",
+          "zh": "意大利"
+        },
+        {
+          "fr": "Pays-Bas",
+          "zh": "荷兰"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quel jeu Kirby a introduit pour la première fois les capacités de copie ?",
+        "zh": "哪一款 Kirby 游戏首次引入了复制能力？"
+      },
+      "correct_answer": {
+        "fr": "Kirby's Adventure",
+        "zh": "Kirby's Adventure"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Kirby Super Star",
+          "zh": "Kirby Super Star"
+        },
+        {
+          "fr": "Kirby's Dream Land 2",
+          "zh": "Kirby's Dream Land 2"
+        },
+        {
+          "fr": "Kirby's Dream Land",
+          "zh": "Kirby's Dream Land"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Histoire",
+        "zh": "历史"
+      },
+      "question": {
+        "fr": "En 1453, quelle grande ville est tombée ?",
+        "zh": "1453 年，哪座重要城市陷落了？"
+      },
+      "correct_answer": {
+        "fr": "Constantinople",
+        "zh": "君士坦丁堡"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Rome",
+          "zh": "罗马"
+        },
+        {
+          "fr": "Hambourg",
+          "zh": "汉堡"
+        },
+        {
+          "fr": "Athènes",
+          "zh": "雅典"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Quelle est la ville d'origine du Scout dans Team Fortress 2 ?",
+        "zh": "《Team Fortress 2》中 Scout 来自哪座城市？"
+      },
+      "correct_answer": {
+        "fr": "Boston",
+        "zh": "波士顿"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Sydney",
+          "zh": "悉尼"
+        },
+        {
+          "fr": "Detroit",
+          "zh": "底特律"
+        },
+        {
+          "fr": "New York",
+          "zh": "纽约"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Lequel de ces véhicules n'est pas un véhicule DLC dans « Mario Kart 8 » ?",
+        "zh": "以下哪一辆不是《Mario Kart 8》的 DLC 载具？"
+      },
+      "correct_answer": {
+        "fr": "Wild Wiggler",
+        "zh": "Wild Wiggler"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Bone Rattler",
+          "zh": "Bone Rattler"
+        },
+        {
+          "fr": "B Dasher",
+          "zh": "B Dasher"
+        },
+        {
+          "fr": "300 SL Roadster",
+          "zh": "300 SL Roadster"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Musique",
+        "zh": "娱乐：音乐"
+      },
+      "question": {
+        "fr": "À quelle date le rappeur Eazy-E est-il mort ?",
+        "zh": "说唱歌手 Eazy-E 于何时去世？"
+      },
+      "correct_answer": {
+        "fr": "26 mars 1995",
+        "zh": "1995年3月26日"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "11 juillet 1992",
+          "zh": "1992年7月11日"
+        },
+        {
+          "fr": "14 février 1993",
+          "zh": "1993年2月14日"
+        },
+        {
+          "fr": "21 octobre 1994",
+          "zh": "1994年10月21日"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Culture générale",
+        "zh": "常识"
+      },
+      "question": {
+        "fr": "Quel célèbre architecte, mort en 2019 à l’âge de 102 ans, a conçu la pyramide de verre du Louvre à Paris ?",
+        "zh": "哪位于 2019 年以 102 岁高龄去世的著名建筑师设计了巴黎卢浮宫的玻璃金字塔？"
+      },
+      "correct_answer": {
+        "fr": "I. M. Pei",
+        "zh": "贝聿铭"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Pascale Guédot",
+          "zh": "Pascale Guédot"
+        },
+        {
+          "fr": "Frank Gehry",
+          "zh": "Frank Gehry"
+        },
+        {
+          "fr": "Wang Shu",
+          "zh": "王澍"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Musique",
+        "zh": "娱乐：音乐"
+      },
+      "question": {
+        "fr": "Quel groupe de rock a sorti l'album « The Bends » en mars 1995 ?",
+        "zh": "哪个摇滚乐队于 1995 年 3 月发行了专辑《The Bends》？"
+      },
+      "correct_answer": {
+        "fr": "Radiohead",
+        "zh": "Radiohead"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Nirvana",
+          "zh": "Nirvana"
+        },
+        {
+          "fr": "Coldplay",
+          "zh": "Coldplay"
+        },
+        {
+          "fr": "U2",
+          "zh": "U2"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Sports",
+        "zh": "体育"
+      },
+      "question": {
+        "fr": "Combien de fois Björn Borg a-t-il remporté Roland-Garros ?",
+        "zh": "比约恩·博格赢得过多少次法国网球公开赛冠军？"
+      },
+      "correct_answer": {
+        "fr": "6",
+        "zh": "6"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "4",
+          "zh": "4"
+        },
+        {
+          "fr": "9",
+          "zh": "9"
+        },
+        {
+          "fr": "2",
+          "zh": "2"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Cinéma",
+        "zh": "娱乐：电影"
+      },
+      "question": {
+        "fr": "L'arme que Clint Eastwood utilise dans « Dirty Harry » était un .44 Automag.",
+        "zh": "Clint Eastwood 在《Dirty Harry》中使用的武器是一把 .44 Automag。"
+      },
+      "correct_answer": {
+        "fr": "Faux",
+        "zh": "错误"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Vrai",
+          "zh": "正确"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Lequel de ces personnages N'EST PAS jouable dans le jeu vidéo Overwatch sorti en 2016 ?",
+        "zh": "以下哪位不是 2016 年电子游戏《Overwatch》中的可玩角色？"
+      },
+      "correct_answer": {
+        "fr": "Invoker",
+        "zh": "Invoker"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Mercy",
+          "zh": "Mercy"
+        },
+        {
+          "fr": "Winston",
+          "zh": "Winston"
+        },
+        {
+          "fr": "Zenyatta",
+          "zh": "Zenyatta"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Mythologie",
+        "zh": "神话"
+      },
+      "question": {
+        "fr": "Dans la mythologie grecque, le dieu de la guerre s'appelle Mars.",
+        "zh": "在希腊神话中，战神叫 Mars。"
+      },
+      "correct_answer": {
+        "fr": "Faux",
+        "zh": "错误"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Vrai",
+          "zh": "正确"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "Lequel n'est pas un personnage jouable du jeu vidéo Killer7 sorti en 2005 ?",
+        "zh": "以下哪位不是 2005 年电子游戏《Killer7》中的可玩角色？"
+      },
+      "correct_answer": {
+        "fr": "Frank Smith",
+        "zh": "Frank Smith"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Mask de Smith",
+          "zh": "Mask de Smith"
+        },
+        {
+          "fr": "Dan Smith",
+          "zh": "Dan Smith"
+        },
+        {
+          "fr": "Coyote Smith",
+          "zh": "Coyote Smith"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Géographie",
+        "zh": "地理"
+      },
+      "question": {
+        "fr": "L'Érythrée, devenue le 182e membre de l'ONU en 1993, se trouve sur quel continent ?",
+        "zh": "厄立特里亚于 1993 年成为联合国第 182 个成员国，它位于哪个洲？"
+      },
+      "correct_answer": {
+        "fr": "Afrique",
+        "zh": "非洲"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Europe",
+          "zh": "欧洲"
+        },
+        {
+          "fr": "Asie",
+          "zh": "亚洲"
+        },
+        {
+          "fr": "Amérique du Sud",
+          "zh": "南美洲"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Musique",
+        "zh": "娱乐：音乐"
+      },
+      "question": {
+        "fr": "Le groupe de heavy metal Black Sabbath est originaire de quelle ville anglaise ?",
+        "zh": "重金属乐队 Black Sabbath 来自英国哪座城市？"
+      },
+      "correct_answer": {
+        "fr": "Birmingham",
+        "zh": "伯明翰"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Manchester",
+          "zh": "曼彻斯特"
+        },
+        {
+          "fr": "Londres",
+          "zh": "伦敦"
+        },
+        {
+          "fr": "Newcastle upon Tyne",
+          "zh": "纽卡斯尔"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Anime et manga japonais",
+        "zh": "娱乐：日本动漫与漫画"
+      },
+      "question": {
+        "fr": "Quel personnage de JoJo's Bizarre Adventure possède le Stand nommé Silver Chariot ?",
+        "zh": "《JoJo的奇妙冒险》中，哪个角色拥有名为 Silver Chariot 的替身？"
+      },
+      "correct_answer": {
+        "fr": "Jean Pierre Polnareff",
+        "zh": "Jean Pierre Polnareff"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Noriaki Kakyoin",
+          "zh": "Noriaki Kakyoin"
+        },
+        {
+          "fr": "Hol Horse",
+          "zh": "Hol Horse"
+        },
+        {
+          "fr": "Hermes Costello",
+          "zh": "Hermes Costello"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Musique",
+        "zh": "娱乐：音乐"
+      },
+      "question": {
+        "fr": "Lequel de ces albums est un album du Wu-Tang Clan ?",
+        "zh": "以下哪张专辑属于 Wu-Tang Clan？"
+      },
+      "correct_answer": {
+        "fr": "Iron Flag",
+        "zh": "Iron Flag"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Perfect Hair",
+          "zh": "Perfect Hair"
+        },
+        {
+          "fr": "The Low End Theory",
+          "zh": "The Low End Theory"
+        },
+        {
+          "fr": "Licensed to Ill",
+          "zh": "Licensed to Ill"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Sports",
+        "zh": "体育"
+      },
+      "question": {
+        "fr": "Laquelle de ces équipes de NHL n'a jamais déménagé depuis sa création ?",
+        "zh": "以下哪支 NHL 球队自成立以来从未搬迁过？"
+      },
+      "correct_answer": {
+        "fr": "St. Louis Blues",
+        "zh": "St. Louis Blues"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "New Jersey Devils",
+          "zh": "New Jersey Devils"
+        },
+        {
+          "fr": "Carolina Hurricanes",
+          "zh": "Carolina Hurricanes"
+        },
+        {
+          "fr": "Dallas Stars",
+          "zh": "Dallas Stars"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "difficile",
+        "zh": "困难"
+      },
+      "category": {
+        "fr": "Divertissement : Cinéma",
+        "zh": "娱乐：电影"
+      },
+      "question": {
+        "fr": "Dans « Star Trek Nemesis », pourquoi le Préteur Shinzon a-t-il été créé ?",
+        "zh": "在《Star Trek Nemesis》中，执政官 Shinzon 为什么被创造出来？"
+      },
+      "correct_answer": {
+        "fr": "Pour remplacer Picard comme agent romulien",
+        "zh": "作为罗慕伦特工取代 Picard"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Pour détruire l'Enterprise",
+          "zh": "摧毁企业号"
+        },
+        {
+          "fr": "Pour devenir l'ami de Picard",
+          "zh": "成为 Picard 的朋友"
+        },
+        {
+          "fr": "Pour voler l'Enterprise",
+          "zh": "偷走企业号"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Science : Gadgets",
+        "zh": "科学：电子产品"
+      },
+      "question": {
+        "fr": "En quelle année le DVD a-t-il été inventé ?",
+        "zh": "DVD 是在哪一年发明的？"
+      },
+      "correct_answer": {
+        "fr": "1995",
+        "zh": "1995"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "2000",
+          "zh": "2000"
+        },
+        {
+          "fr": "1990",
+          "zh": "1990"
+        },
+        {
+          "fr": "1980",
+          "zh": "1980"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "vrai ou faux",
+        "zh": "判断题"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Culture générale",
+        "zh": "常识"
+      },
+      "question": {
+        "fr": "Une étude scientifique sur les cacahuètes dans les bars a trouvé des traces de plus de 100 spécimens uniques d'urine.",
+        "zh": "一项关于酒吧花生的科学研究发现其中有超过 100 种不同尿液样本的痕迹。"
+      },
+      "correct_answer": {
+        "fr": "Faux",
+        "zh": "错误"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Vrai",
+          "zh": "正确"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Comics",
+        "zh": "娱乐：漫画"
+      },
+      "question": {
+        "fr": "Dans Black Hammer, à travers quelle dimension le colonel Weird voyage-t-il ?",
+        "zh": "在《Black Hammer》中，Weird 上校穿越的是哪个维度？"
+      },
+      "correct_answer": {
+        "fr": "Para-Zone",
+        "zh": "Para-Zone"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Hyperspace",
+          "zh": "超空间"
+        },
+        {
+          "fr": "Univers miroir",
+          "zh": "镜像宇宙"
+        },
+        {
+          "fr": "Zone fantôme",
+          "zh": "幽灵区"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Cinéma",
+        "zh": "娱乐：电影"
+      },
+      "question": {
+        "fr": "Dans la franchise Mad Max, quel type de voiture est la Pursuit Special conduite par Max ?",
+        "zh": "在《Mad Max》系列中，Max 驾驶的 Pursuit Special 是哪种车型？"
+      },
+      "correct_answer": {
+        "fr": "Ford Falcon",
+        "zh": "福特 Falcon"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Holden Monaro",
+          "zh": "Holden Monaro"
+        },
+        {
+          "fr": "Chrysler Valiant Charger",
+          "zh": "Chrysler Valiant Charger"
+        },
+        {
+          "fr": "Pontiac Firebird",
+          "zh": "Pontiac Firebird"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Science : Informatique",
+        "zh": "科学：计算机"
+      },
+      "question": {
+        "fr": "Que signifie « LCD » ?",
+        "zh": "“LCD” 代表什么？"
+      },
+      "correct_answer": {
+        "fr": "Écran à cristaux liquides",
+        "zh": "液晶显示器"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Conception de contrôle du langage",
+          "zh": "语言控制设计"
+        },
+        {
+          "fr": "Dernière différence commune",
+          "zh": "最后共同差异"
+        },
+        {
+          "fr": "Conception continue longue",
+          "zh": "长连续设计"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "facile",
+        "zh": "简单"
+      },
+      "category": {
+        "fr": "Histoire",
+        "zh": "历史"
+      },
+      "question": {
+        "fr": "Qui a été le premier dirigeant d'Haïti après l'indépendance du pays ?",
+        "zh": "海地独立后第一位统治者是谁？"
+      },
+      "correct_answer": {
+        "fr": "Jean-Jacques Dessalines",
+        "zh": "Jean-Jacques Dessalines"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Toussaint Louverture",
+          "zh": "Toussaint Louverture"
+        },
+        {
+          "fr": "Henri Christophe",
+          "zh": "Henri Christophe"
+        },
+        {
+          "fr": "Alexandre Pétion",
+          "zh": "Alexandre Pétion"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Divertissement : Jeux vidéo",
+        "zh": "娱乐：电子游戏"
+      },
+      "question": {
+        "fr": "En quelle année les succès ont-ils été ajoutés à Steam ?",
+        "zh": "Steam 是在哪一年加入成就系统的？"
+      },
+      "correct_answer": {
+        "fr": "2007",
+        "zh": "2007"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "2008",
+          "zh": "2008"
+        },
+        {
+          "fr": "2009",
+          "zh": "2009"
+        },
+        {
+          "fr": "2006",
+          "zh": "2006"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Véhicules",
+        "zh": "交通工具"
+      },
+      "question": {
+        "fr": "Quel animal figure sur le logo d'Abarth, la division sport automobile de Fiat ?",
+        "zh": "菲亚特赛车部门 Abarth 的标志上是什么动物？"
+      },
+      "correct_answer": {
+        "fr": "Scorpion",
+        "zh": "蝎子"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Serpent",
+          "zh": "蛇"
+        },
+        {
+          "fr": "Taureau",
+          "zh": "公牛"
+        },
+        {
+          "fr": "Cheval",
+          "zh": "马"
+        }
+      ]
+    },
+    {
+      "type": {
+        "fr": "choix multiple",
+        "zh": "多项选择"
+      },
+      "difficulty": {
+        "fr": "moyen",
+        "zh": "中等"
+      },
+      "category": {
+        "fr": "Science et nature",
+        "zh": "科学与自然"
+      },
+      "question": {
+        "fr": "Dans le tableau périodique des éléments, quel est le symbole de l'étain ?",
+        "zh": "在元素周期表中，锡的元素符号是什么？"
+      },
+      "correct_answer": {
+        "fr": "Sn",
+        "zh": "Sn"
+      },
+      "incorrect_answers": [
+        {
+          "fr": "Ti",
+          "zh": "Ti"
+        },
+        {
+          "fr": "Ni",
+          "zh": "Ni"
+        },
+        {
+          "fr": "Na",
+          "zh": "Na"
+        }
+      ]
+    }
+  ]
+}

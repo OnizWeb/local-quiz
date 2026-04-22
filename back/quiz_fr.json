@@ -1,0 +1,241 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Quel est le nom de la province que vous explorez dans Runescape ?",
+      "correct_answer": "Gielinor",
+      "incorrect_answers": ["Mordor", "Kopar", "Ashendale"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "moyen",
+      "category": "Divertissement : Cinéma",
+      "question": "Le film \"The Rocky Horror Picture Show\" (1975) s’ouvre avec de grandes lèvres flottantes chantant la chanson d’ouverture",
+      "correct_answer": "Vrai",
+      "incorrect_answers": ["Faux"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "moyen",
+      "category": "Divertissement : Anime et Manga japonais",
+      "question": "Dans Full Metal Panic!, les Whispered sont ceux capables de créer la Technologie Noire.",
+      "correct_answer": "Vrai",
+      "incorrect_answers": ["Faux"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Véhicules",
+      "question": "Complétez l’analogie suivante : Audi est à Volkswagen ce que Infiniti est à ?",
+      "correct_answer": "Nissan",
+      "incorrect_answers": ["Honda", "Hyundai", "Subaru"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "difficile",
+      "category": "Divertissement : Anime et Manga japonais",
+      "question": "Le personnage Plum de \"No Game No Life\" est une fille.",
+      "correct_answer": "Faux",
+      "incorrect_answers": ["Vrai"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Télévision",
+      "question": "Dans \"Star Trek\", quelle est la Première Règle d’Acquisition des Ferengis ?",
+      "correct_answer": "Une fois que vous avez leur argent, vous ne le rendez jamais.",
+      "incorrect_answers": [
+        "Ne placez jamais l’amitié au-dessus du profit",
+        "L’avidité est éternelle",
+        "Ne laissez jamais la famille entraver une opportunité"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Cinéma",
+      "question": "Lequel de ces films n’est pas basé sur un livre ?",
+      "correct_answer": "Citizen Kane",
+      "incorrect_answers": ["Le Parrain", "Forrest Gump", "Jurassic Park"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Divertissement : Musique",
+      "question": "Sur quel album des Beatles trouve-t-on la chanson \"Eleanor Rigby\" ?",
+      "correct_answer": "Revolver",
+      "incorrect_answers": ["Help!", "Rubber Soul", "Abbey Road"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Géographie",
+      "question": "Ouagadougou est la capitale de quel pays africain ?",
+      "correct_answer": "Burkina Faso",
+      "incorrect_answers": ["République centrafricaine", "Sénégal", "Zambie"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Science : Mathématiques",
+      "question": "Quel est le premier exposant premier de Mersenne supérieur à 1000 ?",
+      "correct_answer": "1279",
+      "incorrect_answers": ["2203", "1009", "1069"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Dessins animés et animations",
+      "question": "Bugs Bunny, Tony le Tigre et d'autres personnages animaux bipèdes sont appelés quel type de personnage ?",
+      "correct_answer": "Anthropomorphe",
+      "incorrect_answers": [
+        "Anthropolegique",
+        "Anthrologique",
+        "Anthrogénétique"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "facile",
+      "category": "Culture générale",
+      "question": "Lequel de ces mots désigne quelque chose fabriqué, distribué ou vendu illégalement ?",
+      "correct_answer": "Contrefaçon",
+      "incorrect_answers": ["Cireur de bottes", "Lacet de botte", "Amorçage"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Comics",
+      "question": "Qui a écrit la série de comics Batman \"The Killing Joke\" ?",
+      "correct_answer": "Alan Moore",
+      "incorrect_answers": ["Bill Finger", "Frank Miller", "Jerry Siegel"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Pourquoi le personnage Trevor Philips a-t-il été renvoyé de l’armée de l’air ?",
+      "correct_answer": "Problèmes de santé mentale",
+      "incorrect_answers": ["Blessures", "Maladie", "Danger pour les autres"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Science : Gadgets",
+      "question": "Sur quel iPhone l’assistant vocal Siri d’Apple a-t-il fait ses débuts ?",
+      "correct_answer": "iPhone 4S",
+      "incorrect_answers": ["iPhone 6S", "iPhone 3GS", "iPhone 5S"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Dans Left 4 Dead, quel est le nom de famille du personnage Bill ?",
+      "correct_answer": "Overbeck",
+      "incorrect_answers": ["Fish", "Roberts", "Stevenson"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Quel était le premier appareil de jeu portable au monde ?",
+      "correct_answer": "Mattel Auto Race",
+      "incorrect_answers": ["Game Boy", "Microvision", "Game & Watch"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "moyen",
+      "category": "Divertissement : Musique",
+      "question": "Le groupe HEALTH s’appelle ainsi car ils voulaient choisir un mot du quotidien pour leur nom.",
+      "correct_answer": "Vrai",
+      "incorrect_answers": ["Faux"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "facile",
+      "category": "Animaux",
+      "question": "Les zèbres sont blancs avec des rayures noires.",
+      "correct_answer": "Faux",
+      "incorrect_answers": ["Vrai"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "facile",
+      "category": "Célébrités",
+      "question": "Sur quoi le réalisateur Dan Bell concentre-t-il généralement ses films ?",
+      "correct_answer": "Bâtiments abandonnés et centres commerciaux désertés",
+      "incorrect_answers": [
+        "Monuments historiques",
+        "Films d’action",
+        "Documentaires"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Quel était le nom de code de la \"Nintendo Gamecube\" ?",
+      "correct_answer": "Dolphin",
+      "incorrect_answers": ["Nitro", "Revolution", "Atlantis"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "facile",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Quel était le nom original de Crash Bandicoot ?",
+      "correct_answer": "Willie Wombat",
+      "incorrect_answers": ["Coco Bandicoot", "Marvelous Mole", "Wally Wombat"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Histoire",
+      "question": "Quel bâtiment a été incendié le 24 août 1812 ?",
+      "correct_answer": "La Maison-Blanche",
+      "incorrect_answers": [
+        "Parlement",
+        "Assemblée nationale",
+        "Palais de la Nation"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Histoire",
+      "question": "Quel fusil d’assaut automatique russe a été développé en 1947 et est encore utilisé aujourd’hui ?",
+      "correct_answer": "AK-47",
+      "incorrect_answers": ["RPK", "M16", "MG 42"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Divertissement : Jeux vidéo",
+      "question": "Quelle fonctionnalité a été ajoutée dans \"Heretic\" (1994) que DOOM ne pouvait pas intégrer ?",
+      "correct_answer": "Regarder en haut et en bas",
+      "incorrect_answers": [
+        "Salles plus grandes",
+        "Armes illimitées",
+        "Textures détaillées"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "moyen",
+      "category": "Mythologie",
+      "question": "Hel était la fille de quelle figure de la mythologie nordique ?",
+      "correct_answer": "Loki",
+      "incorrect_answers": ["Thor", "Odin", "Balder"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "difficile",
+      "category": "Divertissement : Comics",
+      "question": "Dans les comics Batman, sous quel autre nom est connu le Dr Jonathan Crane ?",
+      "correct_answer": "Épouvantail",
+      "incorrect_answers": ["Bane", "Calendar Man", "Clayface"]
+    }
+  ]
+}

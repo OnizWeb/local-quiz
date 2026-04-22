@@ -9,26 +9,27 @@ const path = require("path");
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
-    },
-    transports: ["websocket", "polling"]
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+  transports: ["websocket", "polling"],
 });
 
 app.use(cors());
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    next();
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  next();
 });
 
 app.use(express.static("public"));
 
 let players = {};
 let hostSocketId = null;
+let mobileHostSocketId = null;
 
 const allQuestions = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "questions.json"), "utf-8")
+  fs.readFileSync(path.join(__dirname, "quiz_fr_ch.json"), "utf-8"),
 );
 
 let quiz = []; // session actuelle
@@ -44,24 +45,24 @@ function shuffle(array) {
 let currentQuestionIndex = -1;
 let quizStarted = false;
 let answers = {}; // { socketId: choixIndex }
-const QUESTION_TIME = 10000; // 10 secondes
-const QUESTIONS_PER_GAME = 50;
+const QUESTION_TIME = 15000; // 20 secondes
+const NEXT_QUESTION_TIME = 4000; // 3 secondes
+const QUESTIONS_PER_GAME = 10;
 let questionTimer = null;
-
-
+let nextQuestionTimer = null;
 
 const os = require("os");
 
 function getLocalIP() {
-    const interfaces = os.networkInterfaces();
+  const interfaces = os.networkInterfaces();
 
-    for (const name of Object.keys(interfaces)) {
-        for (const net of interfaces[name]) {
-            if (net.family === "IPv4" && !net.internal) {
-                return net.address;
-            }
-        }
+  for (const name of Object.keys(interfaces)) {
+    for (const net of interfaces[name]) {
+      if (net.family === "IPv4" && !net.internal) {
+        return net.address;
+      }
     }
+  }
 }
 
 const LOCAL_IP = getLocalIP();
@@ -69,9 +70,7 @@ const PORT = 6969;
 const URL = `http://${LOCAL_IP}:${PORT}`;
 
 io.on("connection", (socket) => {
-    console.log("New connection:", socket.id);
-
-    socket.on("registerHost", () => {
+  socket.on("registerHost", () => {
     hostSocketId = socket.id;
     console.log("Host enregistré :", socket.id);
 
@@ -82,30 +81,64 @@ io.on("connection", (socket) => {
     players[socket.id] = {
       id: socket.id,
       name: playerName || `Joueur-${socket.id.slice(0, 4)}`,
-      score: 0
+      score: 0,
     };
 
-    io.to(hostSocketId).emit("playersList", Object.values(players));
-    socket.emit("registered", players[socket.id]);
-
-    // si le quiz a déjà commencé, on peut envoyer la question courante
-    if (quizStarted && currentQuestionIndex >= 0) {
-      socket.emit("newQuestion", quiz[currentQuestionIndex]);
+    if (!mobileHostSocketId) {
+      mobileHostSocketId = socket.id;
     }
+
+    io.to(hostSocketId).emit("playersList", Object.values(players));
+
+    socket.emit("registered", {
+      ...players[socket.id],
+      isHost: socket.id === mobileHostSocketId,
+    });
   });
 
-  socket.on("startQuiz", () => {
-        if (socket.id !== hostSocketId) return;
+  socket.on("startQuiz", async () => {
+    if (!canControlQuiz(socket.id)) return;
 
-        quizStarted = true;
+    quizStarted = true;
 
-        // 🔥 on mélange et on prend 50 questions
-        quiz = shuffle([...allQuestions]).slice(0, QUESTIONS_PER_GAME);
+    const res = await fetch(
+      `https://opentdb.com/api.php?amount=${QUESTIONS_PER_GAME}`,
+    );
 
-        currentQuestionIndex = 0;
+    const questions = await res.json();
 
-        sendQuestion();
-    });
+    const mappedQuestion = await Promise.all(
+      questions.results.map(async (question, index) => {
+        const {
+          correct_answer,
+          incorrect_answers,
+          question: qText,
+          ...rest
+        } = question;
+
+        const translatedZh = await translateQuestion(qText, "zh");
+        const translatedFr = await translateQuestion(qText, "fr");
+
+        const choices = await shuffleChoices(correct_answer, incorrect_answers);
+
+        return {
+          id: index + 1,
+          ...rest,
+          ...choices,
+          question: {
+            fr: translatedFr,
+            zh: translatedZh,
+          },
+        };
+      }),
+    );
+
+    quiz = shuffle([...mappedQuestion]).slice(0, QUESTIONS_PER_GAME);
+
+    currentQuestionIndex = 0;
+
+    sendQuestion(socket.id);
+  });
 
   socket.on("submitAnswer", ({ questionId, choiceIndex }) => {
     if (!players[socket.id]) return;
@@ -122,30 +155,25 @@ io.on("connection", (socket) => {
     // informer le host en temps réel
     io.to(hostSocketId).emit("answersCount", {
       totalPlayers: Object.keys(players).length,
-      totalAnswers: Object.keys(answers).length
+      totalAnswers: Object.keys(answers).length,
     });
   });
-
-  socket.on("nextQuestion", () => {
-  if (socket.id !== hostSocketId) return;
-
-  clearTimeout(questionTimer);
-
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex >= quiz.length) {
-    io.emit("quizEnded", Object.values(players));
-    return;
-  }
-
-  sendQuestion();
-});
 
   socket.on("disconnect", () => {
     console.log("Déconnexion :", socket.id);
 
     const wasPlayer = !!players[socket.id];
     delete players[socket.id];
+
+    if (socket.id === mobileHostSocketId) {
+      const remainingPlayers = Object.keys(players);
+      mobileHostSocketId =
+        remainingPlayers.length > 0 ? remainingPlayers[0] : null;
+
+      if (mobileHostSocketId) {
+        io.to(mobileHostSocketId).emit("hostStatus", { isHost: true });
+      }
+    }
 
     if (socket.id === hostSocketId) {
       hostSocketId = null;
@@ -158,26 +186,32 @@ io.on("connection", (socket) => {
 });
 
 app.get("/qrcode.png", async (req, res) => {
-    const qr = await QRCode.toBuffer(`${URL}/join`);
-    res.type("png").send(qr);
+  const qr = await QRCode.toBuffer(`${URL}/join`);
+  res.type("png").send(qr);
 });
 
 app.get("/join", (req, res) => {
-    res.sendFile(__dirname + "/public/mobile.html");
+  res.sendFile(__dirname + "/public/mobile.html");
 });
 
 server.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on ${URL}`);
+  console.log(`Server running on ${URL}`);
 });
 
 function sendQuestion() {
+  if (nextQuestionTimer) {
+    clearTimeout(nextQuestionTimer);
+  }
+
   answers = {};
 
   const question = quiz[currentQuestionIndex];
 
   io.emit("newQuestion", {
     ...question,
-    duration: QUESTION_TIME
+    duration: QUESTION_TIME,
+    currentQuestionNumber: currentQuestionIndex + 1,
+    totalQuestions: quiz.length,
   });
 
   // timer automatique
@@ -198,6 +232,72 @@ function revealAnswer() {
 
   io.emit("revealAnswer", {
     correctIndex: currentQuestion.correct,
-    players: Object.values(players)
+    players: Object.values(players),
   });
+
+  io.emit("playersList", Object.values(players));
+
+  // timer automatique
+  nextQuestionTimer = setTimeout(() => {
+    nextQuestion();
+  }, NEXT_QUESTION_TIME);
+}
+
+function nextQuestion() {
+  clearTimeout(questionTimer);
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex >= quiz.length) {
+    io.emit("quizEnded", Object.values(players));
+    return;
+  }
+
+  sendQuestion();
+}
+
+function canControlQuiz(socketId) {
+  return socketId === hostSocketId || socketId === mobileHostSocketId;
+}
+
+async function translateQuestion(q, lang) {
+  const res = await fetch("http://192.168.0.234:5000/translate", {
+    method: "POST",
+    body: JSON.stringify({
+      q,
+      source: "auto",
+      target: lang,
+      format: "text",
+      alternatives: 3,
+      api_key: "",
+    }),
+    headers: { "Content-Type": "application/json" },
+  });
+
+  const response = await res.json();
+  return response.translatedText;
+}
+
+async function shuffleChoices(correct, incorrect) {
+  const translateCorrectFr = await translateQuestion(correct, "fr");
+  const translateCorrectZh = await translateQuestion(correct, "zh");
+  const translateIncorrects = await Promise.all(
+    incorrect.map(async (inc) => ({
+      fr: await translateQuestion(inc, "fr"),
+      zh: await translateQuestion(inc, "zh"),
+    })),
+  );
+  const choices = [
+    { fr: translateCorrectFr, zh: translateCorrectZh },
+    ...translateIncorrects,
+  ];
+
+  const correctIndex = choices.findIndex(
+    (choice) => choice.fr === correct.fr && choice.zh === correct.zh,
+  );
+
+  return {
+    choices,
+    correct: correctIndex,
+  };
 }

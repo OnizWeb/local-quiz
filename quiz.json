@@ -1,0 +1,591 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "What is the name of the province you explore in Runescape?",
+      "correct_answer": "Gielinor",
+      "incorrect_answers": [
+        "Mordor",
+        "Kopar",
+        "Ashendale"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Entertainment: Film",
+      "question": "The movie &quot;The Rocky Horror Picture Show&quot; (1975) opens with giant floating lips singing the opening song",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "In Full Metal Panic!, Whispered are those who are capable of creating Black Technology.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Vehicles",
+      "question": "Complete the following analogy: Audi is to Volkswagen as Infiniti is to ?",
+      "correct_answer": "Nissan",
+      "incorrect_answers": [
+        "Honda",
+        "Hyundai",
+        "Subaru"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "hard",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "The character Plum from &quot;No Game No Life&quot; is a girl.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Television",
+      "question": "In &quot;Star Trek&quot;, what is the Ferengi&#039;s First Rule of Acquisition?",
+      "correct_answer": "Once you have their money, you never give it back. ",
+      "incorrect_answers": [
+        "Never place friendship above profit",
+        "Greed is Eternal",
+        "Never allow family to stand in the way of opportunity"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Film",
+      "question": "Which of the following movies was not based on a book?",
+      "correct_answer": "Citizen Kane",
+      "incorrect_answers": [
+        "The Godfather",
+        "Forrest Gump",
+        "Jurassic Park"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "On which Beatles album would you find the song &#039;Eleanor Rigby&#039;?",
+      "correct_answer": "Revolver",
+      "incorrect_answers": [
+        "Help!",
+        "Rubber Soul",
+        "Abbey Road"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Geography",
+      "question": "Ouagadougou is the capital of which African country?",
+      "correct_answer": "Burkina Faso",
+      "incorrect_answers": [
+        "Central African Republic",
+        "Senegal",
+        "Zambia"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "In the &quot;Dragon Ball&quot; franchise, what is the name of Goku&#039;s brother?",
+      "correct_answer": "Raditz",
+      "incorrect_answers": [
+        "Gohan",
+        "Vegeta",
+        "Bardock"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Computers",
+      "question": "In the server hosting industry IaaS stands for...",
+      "correct_answer": "Infrastructure as a Service",
+      "incorrect_answers": [
+        "Internet as a Service",
+        "Internet and a Server",
+        "Infrastructure as a Server"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who painted The Starry Night?",
+      "correct_answer": "Vincent van Gogh",
+      "incorrect_answers": [
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Michelangelo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "Why was the character Trevor Philips discharged from the Air Force?",
+      "correct_answer": "Mental Health Issues",
+      "incorrect_answers": [
+        "Injuries",
+        "Disease",
+        "Danger to Others"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Cartoon &amp; Animations",
+      "question": "What ability does Princess Sofia the First have from her amulet that allows her to breathe underwater?",
+      "correct_answer": "Mermaid Transformation",
+      "incorrect_answers": [
+        "Artificial Gills",
+        "Bubble Head",
+        "Bubble Shield"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "General Knowledge",
+      "question": "Which of the following landmarks is not located in New York City?",
+      "correct_answer": "Lincoln Memorial",
+      "incorrect_answers": [
+        "Empire State Building",
+        "Times Square",
+        "Central Park"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "In computing, what does MIDI stand for?",
+      "correct_answer": "Musical Instrument Digital Interface",
+      "incorrect_answers": [
+        "Musical Interface of Digital Instruments",
+        "Modular Interface of Digital Instruments",
+        "Musical Instrument Data Interface"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Television",
+      "question": "What is the name of the pirate that sings the intro to &quot;Spongebob Squarepants&quot;?",
+      "correct_answer": "Painty",
+      "incorrect_answers": [
+        "Patchy",
+        "Lloyd",
+        "Larry"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these is the name of a cut enemy from &quot;Half-Life 2&quot;?",
+      "correct_answer": "Hydra",
+      "incorrect_answers": [
+        "Cthulu",
+        "Spike",
+        "Tremor"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "The French Kingdom helped the United States gain their independence over Great Britain during the Revolutionary War.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Books",
+      "question": "In Rudyard Kipling&#039;s &quot;The Jungle Book&quot;, what type of snake was Kaa?",
+      "correct_answer": "Python",
+      "incorrect_answers": [
+        "Cobra",
+        "Anaconda",
+        "Viper"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "The game series &quot;Titanfall&quot; runs on the Unreal Engine.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "The Battle of Trafalgar took place on October 23rd, 1805",
+      "correct_answer": "False",
+      "incorrect_answers": [
+        "True"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "How many permanent companions are there in the base game version of Fallout: New Vegas?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "6"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "Which of these countries remained neutral during World War II?",
+      "correct_answer": "Switzerland",
+      "incorrect_answers": [
+        "United Kingdom",
+        "France",
+        "Italy"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "What was the code name for the German invasion of the Soviet Union in WW2?",
+      "correct_answer": "Operation Barbarossa",
+      "incorrect_answers": [
+        "Operation Kaiserschlact",
+        "Operation Unthinkable",
+        "Operation Molotov"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Celebrities",
+      "question": "Nikki Diamond portrayed which Gladiator in the 1992 TV show &quot;Gladiators&quot;?",
+      "correct_answer": "Scorpio",
+      "incorrect_answers": [
+        "Jet",
+        "Nightshade",
+        "Falcon"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "When is the Ides of March?",
+      "correct_answer": "March 15",
+      "incorrect_answers": [
+        "March 14",
+        "March 31",
+        "March 1"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "How many people can you recruit in the game Suikoden in a single playthrough?",
+      "correct_answer": "107",
+      "incorrect_answers": [
+        "108",
+        "93",
+        "96"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Cartoon &amp; Animations",
+      "question": "In &quot;Gravity Falls&quot;, how much does Waddles weigh when Mable wins him in &quot;The Time Traveler&#039;s Pig&quot;?",
+      "correct_answer": "15 pounds",
+      "incorrect_answers": [
+        "20 pounds",
+        "10 pounds",
+        "30 pounds"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "How many stars are there to collect in Super Mario 64?",
+      "correct_answer": "120",
+      "incorrect_answers": [
+        "60",
+        "80",
+        "100"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "In the Halo series, which era of SPARTAN is Master Chief? ",
+      "correct_answer": "SPARTAN-II",
+      "incorrect_answers": [
+        "SPARTAN-I",
+        "SPARTAN-III",
+        "SPARTAN-IV"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Vehicles",
+      "question": "Which of the following collision avoidance systems helps airplanes avoid colliding with each other?",
+      "correct_answer": "TCAS",
+      "incorrect_answers": [
+        "GPWS",
+        "OCAS",
+        "TAWS"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Comics",
+      "question": "Which Doom Patrol member was a later addition, first appearing in 1989?",
+      "correct_answer": "Crazy Jane",
+      "incorrect_answers": [
+        "Elast-Girl",
+        "Robotman",
+        "Negative Man"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Computers",
+      "question": "What does the acronym CDN stand for in terms of networking?",
+      "correct_answer": "Content Delivery Network",
+      "incorrect_answers": [
+        "Content Distribution Network",
+        "Computational Data Network",
+        "Compressed Data Network"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which of these founding fathers of the United States of America later became president?",
+      "correct_answer": "James Monroe",
+      "incorrect_answers": [
+        "Alexander Hamilton",
+        "Samuel Adams",
+        "Roger Sherman"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "What were the first two blocks in &quot;Minecraft&quot;?",
+      "correct_answer": "Grass and Cobblestone",
+      "incorrect_answers": [
+        "Grass and Stone",
+        "Crafting Table and Cobblestone",
+        "Cobblestone and Stone"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Books",
+      "question": "Which of these does Charlie NOT read in The Perks of Being a Wallflower?",
+      "correct_answer": "The Grapes of Wrath",
+      "incorrect_answers": [
+        "Hamlet",
+        "The Great Gatsby",
+        "Peter Pan"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "In World of Warcraft lore, which of the following is known as the God of Spiders in the troll&#039;s loa beliefs?",
+      "correct_answer": "Elortha no Shadra",
+      "incorrect_answers": [
+        "Bwonsamdi",
+        "Hakkar",
+        "Shirvallah"
+      ]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "The 2011 movie &quot;The Adventures of Tintin&quot; was directed by Steven Spielberg.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "General Knowledge",
+      "question": "Which of these is NOT considered to be a colour that makes up the rainbow?",
+      "correct_answer": "Pink",
+      "incorrect_answers": [
+        "Blue",
+        "Violet",
+        "Orange"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Art",
+      "question": "What was the major distinction between the English and French Gothic styles of architecture?",
+      "correct_answer": "Fan vaulting",
+      "incorrect_answers": [
+        "Pinnacles",
+        "Gargoyles",
+        "Hemispherical Domes"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Computers",
+      "question": "The C programming language was created by this American computer scientist. ",
+      "correct_answer": "Dennis Ritchie",
+      "incorrect_answers": [
+        "Tim Berners Lee",
+        "al-Khwārizmī",
+        "Willis Ware"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "In &quot;Overwatch&quot;, what is the name of the company that made D.Va&#039;s mech?",
+      "correct_answer": "MEKA",
+      "incorrect_answers": [
+        "MI8",
+        "KPAMC",
+        "JSAMB"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Science &amp; Nature",
+      "question": "The word &quot;science&quot; stems from the word &quot;scire&quot; meaning what?",
+      "correct_answer": "To know",
+      "incorrect_answers": [
+        "To measure",
+        "To live",
+        "To count"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Musicals &amp; Theatres",
+      "question": "Who wrote the award winning musical &quot;In The Heights&quot;?",
+      "correct_answer": "Lin-Manuel Miranda",
+      "incorrect_answers": [
+        "Steven Sondheim",
+        "Francis Scott Key",
+        "John Phillips Sousa"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Television",
+      "question": "In &quot;Star Trek&quot;, what is the Klingon death ritual?",
+      "correct_answer": "Look into sky and yell loudly in mourning.",
+      "incorrect_answers": [
+        "Kiss the jagged forehead before burial.",
+        "Shoot into space in a torpedo casing.",
+        "Split the deceased&#039;s earnings between bloodkin."
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these weapons is NOT available to the Terrorist team in the game, &quot;Counter-Strike: Global Offensive&quot;?",
+      "correct_answer": "SCAR-20",
+      "incorrect_answers": [
+        "SG 550",
+        "CZ-75",
+        "XM1014"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Vehicles",
+      "question": "Which Audi does not use Haldex based all wheel drive system?",
+      "correct_answer": "Audi A8",
+      "incorrect_answers": [
+        "Audi TT",
+        "Audi S3",
+        "Audi A3"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Sports",
+      "question": "With which doubles partner did John McEnroe have most success?",
+      "correct_answer": "Peter Fleming",
+      "incorrect_answers": [
+        "Mark Woodforde",
+        "Michael Stich",
+        "Mary Carillo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Film",
+      "question": "Who did the score to the original Blade Runner?",
+      "correct_answer": "Vangelis",
+      "incorrect_answers": [
+        "Kitaro",
+        "Yanni",
+        "Enya"
+      ]
+    }
+  ]
+}

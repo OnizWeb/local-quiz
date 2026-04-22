@@ -1,0 +1,453 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Mathematics",
+      "question": "What is the first Mersenne prime exponent over 1000?",
+      "correct_answer": "1279",
+      "incorrect_answers": ["2203", "1009", "1069"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Cartoon &amp; Animations",
+      "question": "Bugs Bunny, Tony the Tiger, and other bipedal animal characters are known as what type of character?",
+      "correct_answer": "Anthropomorphic",
+      "incorrect_answers": ["Anthropolegic ", "Anthrologic", "Anthrogenetic"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "General Knowledge",
+      "question": "Which of these words refers to something made, distributed, or sold illegally?",
+      "correct_answer": "Bootleg",
+      "incorrect_answers": ["Bootblack", "Bootlace", "Bootstrap"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Comics",
+      "question": "Who wrote the Batman comic series &quot;The Killing Joke&quot;?",
+      "correct_answer": "Alan Moore",
+      "incorrect_answers": ["Bill Finger", "Frank Miller", "Jerry Siegel"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "Why was the character Trevor Philips discharged from the Air Force?",
+      "correct_answer": "Mental Health Issues",
+      "incorrect_answers": ["Injuries", "Disease", "Danger to Others"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Gadgets",
+      "question": "Apple&#039;s Voice Assistant, Siri, debuted on which iPhone?",
+      "correct_answer": "iPhone 4S",
+      "incorrect_answers": ["iPhone 6S", "iPhone 3GS", "iPhone 5S"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "In Left 4 Dead, what is the character Bill&#039;s last name?",
+      "correct_answer": "Overbeck",
+      "incorrect_answers": ["Fish", "Roberts", "Stevenson"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "What was the world&#039;s first handheld game device?",
+      "correct_answer": "Mattel Auto Race",
+      "incorrect_answers": ["Game Boy", "Microvision", "Game &amp; Watch"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "The band, HEALTH, is called HEALTH because they wanted to choose an everyday word for the band name.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Animals",
+      "question": "Zebras are white with black stripes.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Celebrities",
+      "question": "What does film maker Dan Bell typically focus his films on?",
+      "correct_answer": "Abandoned Buildings and Dead Malls",
+      "incorrect_answers": [
+        "Historic Landmarks",
+        "Action Films",
+        "Documentaries "
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "What was the code name for the &quot;Nintendo Gamecube&quot;?",
+      "correct_answer": "Dolphin",
+      "incorrect_answers": ["Nitro", "Revolution", "Atlantis"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "What was the original name of Crash Bandicoot?",
+      "correct_answer": "Willie Wombat",
+      "incorrect_answers": ["Coco Bandicoot", "Marvelous Mole", "Wally Wombat"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Which building was set aflame on August 24th, 1812?",
+      "correct_answer": "The White House",
+      "incorrect_answers": [
+        "Parliament Building",
+        "Grand National Assembly Building",
+        "Palace of the Nation"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": " What Russian automatic gas-operated assault rifle was developed in the Soviet Union in 1947, and is still popularly used today?",
+      "correct_answer": "AK-47",
+      "incorrect_answers": ["RPK", "M16", "MG 42"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these features was added in the 1994 game &quot;Heretic&quot; that the original &quot;DOOM&quot; could not add due to limitations?",
+      "correct_answer": "Looking up and down",
+      "incorrect_answers": [
+        "Increased room sizes",
+        "Unlimited weapons",
+        "Highly-detailed textures"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Mythology",
+      "question": "Hel was the daughter of which Norse Mythological figure?",
+      "correct_answer": "Loki",
+      "incorrect_answers": ["Thor", "Odin", "Balder"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Comics",
+      "question": "In the Batman comics, by what other name is the villain Dr. Jonathan Crane known?",
+      "correct_answer": "Scarecrow",
+      "incorrect_answers": ["Bane", "Calendar Man", "Clayface"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "What is the name of the main island in PLAYERUNKNOWN&#039;S BATTLEGROUNDS?",
+      "correct_answer": "Erangel",
+      "incorrect_answers": ["Marmara", "Severny", "Lastovo"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "Sargon II, a king of the Neo-Assyrian Empire, was a direct descendant of Sargon of Akkad.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "What name is the main character Chihiro given in the 2001 movie &quot;Spirited Away&quot;?",
+      "correct_answer": "Sen (Thousand)",
+      "incorrect_answers": [
+        "Hyaku (Hundred)",
+        "Ichiman (Ten thousand)",
+        "Juu (Ten)"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Mathematics",
+      "question": "To the nearest whole number, how many radians are in a whole circle?",
+      "correct_answer": "6",
+      "incorrect_answers": ["3", "4", "5"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of these countries&#039; national teams qualified for the 2018 FIFA World Cup in Russia?",
+      "correct_answer": "Tunisia",
+      "incorrect_answers": ["United States of America", "Italy", "Netherlands"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Which Kirby game first introduced Copy Abilities?",
+      "correct_answer": "Kirby&#039;s Adventure",
+      "incorrect_answers": [
+        "Kirby Super Star",
+        "Kirby&#039;s Dream Land 2",
+        "Kirby&#039;s Dream Land"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "In 1453, which important city fell?",
+      "correct_answer": "Constantinople",
+      "incorrect_answers": ["Rome", "Hamburg", "Athens"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "What&#039;s the Team Fortress 2 Scout&#039;s city of origin?",
+      "correct_answer": "Boston",
+      "incorrect_answers": ["Sydney", "Detroit", "New York"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these is not a DLC vehicle in &quot;Mario Kart 8&quot;?",
+      "correct_answer": "Wild Wiggler",
+      "incorrect_answers": ["Bone Rattler", "B Dasher", "300 SL Roadster"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "When did the rapper Eazy-E die?",
+      "correct_answer": "March 26, 1995",
+      "incorrect_answers": [
+        "July 11, 1992",
+        "February 14, 1993",
+        "October 21, 1994"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "Which famed architect, who died in 2019 aged 102, designed the glass pyramid at the Louvre museum in Paris?",
+      "correct_answer": "I. M. Pei",
+      "incorrect_answers": ["Pascale Gu&eacute;dot", "Frank Gehry", "Wang Shu"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which rock band released the album &quot;The Bends&quot; in March 1995?",
+      "correct_answer": "Radiohead",
+      "incorrect_answers": ["Nirvana", "Coldplay", "U2"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "How many French Open&#039;s did Bj&ouml;rn Borg win?",
+      "correct_answer": "6",
+      "incorrect_answers": ["4", "9", "2"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "hard",
+      "category": "Entertainment: Film",
+      "question": "The weapon Clint Eastwood uses in &quot;Dirty Harry&quot; was a .44 Automag.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these is NOT a playable character in the 2016 video game Overwatch?",
+      "correct_answer": "Invoker",
+      "incorrect_answers": ["Mercy", "Winston", "Zenyatta"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Mythology",
+      "question": "In the Greek Mythology, the god of war is called Mars.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Which is not a playable character in the 2005 video game Killer7?",
+      "correct_answer": "Frank Smith",
+      "incorrect_answers": ["Mask de Smith", "Dan Smith", "Coyote Smith"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Geography",
+      "question": "Eritrea, which became the 182nd member of the UN in 1993, is in the continent of?",
+      "correct_answer": "Africa",
+      "incorrect_answers": ["Europe", "Asia", "South America"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Music",
+      "question": "The heavy metal band Black Sabbath hail from which English city?",
+      "correct_answer": "Birmingham",
+      "incorrect_answers": ["Manchester", "London", "Newcastle-Upon-Tyne"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "Which JoJo&#039;s Bizarre Adventure character possesses the Stand named Silver Chariot?",
+      "correct_answer": "Jean Pierre Polnareff",
+      "incorrect_answers": ["Noriaki Kakyoin", "Hol Horse", "Hermes Costello"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which of these albums is a Wu-Tang Clan album?",
+      "correct_answer": "Iron Flag",
+      "incorrect_answers": [
+        "Perfect Hair",
+        "The Low End Theory",
+        "Licensed to Ill"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Which of these NHL teams have never moved since their inception?",
+      "correct_answer": "St. Louis Blues",
+      "incorrect_answers": [
+        "New Jersey Devils",
+        "Carolina Hurricanes",
+        "Dallas Stars"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Film",
+      "question": "In &quot;Star Trek Nemesis&quot;, why was Praetor Shinzon created?",
+      "correct_answer": "To replace Picard as a Romulan Agent",
+      "incorrect_answers": [
+        "To destroy the Enterprise",
+        "To become Picard&#039;s friend ",
+        "To steal the Enterprise"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Science: Gadgets",
+      "question": "When was the DVD invented?",
+      "correct_answer": "1995",
+      "incorrect_answers": ["2000", "1990", "1980"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "General Knowledge",
+      "question": "A scientific study on peanuts in bars found traces of over 100 unique specimens of urine.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Comics",
+      "question": "In Black Hammer, what dimension does Colonel Weird travel through?",
+      "correct_answer": "Para-Zone",
+      "incorrect_answers": ["Hyperspace", "Mirror Universe", "Phantom Zone"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Film",
+      "question": "In the Mad Max franchise, what type of car is the Pursuit Special driven by Max?",
+      "correct_answer": "Ford Falcon",
+      "incorrect_answers": [
+        "Holden Monaro",
+        "Chrysler Valiant Charger",
+        "Pontiac Firebird"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science: Computers",
+      "question": "What does &quot;LCD&quot; stand for?",
+      "correct_answer": "Liquid Crystal Display",
+      "incorrect_answers": [
+        "Language Control Design",
+        "Last Common Difference",
+        "Long Continuous Design"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "Who was the first ruler of Haiti after the country had gained its independence?",
+      "correct_answer": "Jean-Jacques Dessalines",
+      "incorrect_answers": [
+        "Toussaint Louverture",
+        "Henri Christophe",
+        "Alexandre Petion"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "In what year were achivements added to Steam?",
+      "correct_answer": "2007",
+      "incorrect_answers": ["2008", "2009", "2006"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Vehicles",
+      "question": "Which animal features on the logo for Abarth, the motorsport division of Fiat?",
+      "correct_answer": "Scorpion",
+      "incorrect_answers": ["Snake", "Bull", "Horse"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Science &amp; Nature",
+      "question": "On the periodic table of elements, what is the symbol for Tin?",
+      "correct_answer": "Sn",
+      "incorrect_answers": ["Ti", "Ni", "Na"]
+    }
+  ]
+}
