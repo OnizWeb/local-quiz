@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Arena - Host</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/desktop/styles.css">
+</head>
+
+<body>
+  <div class="main">
+
+    <aside class="panel panel-purple">
+      <h2 class="panel-title">Joueurs connectés</h2>
+      <ul id="playersList"></ul>
+    </aside>
+
+    <main class="panel panel-orange question-box">
+      <div>
+
+        <h2 id="questionText" class="panel-title">En attente du lancement...</h2>
+        <div id="choices"></div>
+      </div>
+
+
+
+      <div class="panel-title panel-footer">
+        <div class="panel-footer-info">
+          <p id="answersInfo">0 réponse reçue</p>
+          <p id="questionProgress" class="footer-note">Question 0 / 0</p>
+        </div>
+
+        <div class="timer-wrapper">
+          <svg class="timer" viewBox="0 0 120 120">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffe600" />
+                <stop offset="50%" stop-color="#ffb300" />
+                <stop offset="100%" stop-color="#ff6a00" />
+              </linearGradient>
+            </defs>
+            <!-- fond -->
+            <circle class="bg" cx="60" cy="60" r="52"></circle>
+
+            <!-- progression -->
+            <circle id="timerFill" class="progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+
+          <div class="timer-text" id="timerText">10</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <img id="qrCodeImage" src="/qrcode.png" alt="QR code pour rejoindre la partie" />
+    <h1>Quiz Arena</h1>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/desktop/index.js"></script>
+</body>
+
+</html>

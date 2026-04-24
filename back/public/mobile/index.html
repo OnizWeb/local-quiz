@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Arena - Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/mobile/styles.css">
+</head>
+
+<body>
+  <div class="app">
+    <h1>Quiz Arena</h1>
+
+    <div id="joinArea">
+      <input type="text" id="playerName" placeholder="Entre ton pseudo" />
+      <button id="joinBtn">Rejoindre la partie</button>
+    </div>
+
+    <button id="startBtn" style="display: none">Lancer le quiz</button>
+
+    <p id="questionProgress" class="sub">Question 0 / 0</p>
+    <h2 id="questionText">En attente d'une question...</h2>
+
+    <div class="timer-wrapper">
+      <svg class="timer" viewBox="0 0 120 120">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#35ff5c" />
+            <stop offset="50%" stop-color="#ffe600" />
+            <stop offset="100%" stop-color="#ff8a00" />
+          </linearGradient>
+        </defs>
+        <circle class="bg" cx="60" cy="60" r="52"></circle>
+        <circle id="timerFill" class="progress" cx="60" cy="60" r="52"></circle>
+      </svg>
+
+      <div class="timer-text" id="time">10</div>
+    </div>
+
+    <div id="choices"></div>
+    <p id="status" class="waiting"></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/mobile/index.js"></script>
+</body>
+
+</html>

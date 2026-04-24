@@ -185,13 +185,17 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/desktop/index.html");
+});
+
 app.get("/qrcode.png", async (req, res) => {
   const qr = await QRCode.toBuffer(`${URL}/join`);
   res.type("png").send(qr);
 });
 
 app.get("/join", (req, res) => {
-  res.sendFile(__dirname + "/public/mobile.html");
+  res.sendFile(__dirname + "/public/mobile/index.html");
 });
 
 server.listen(PORT, "0.0.0.0", () => {
