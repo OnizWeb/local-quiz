@@ -44,6 +44,7 @@ function shuffle(array) {
 
 let currentQuestionIndex = -1;
 let quizStarted = false;
+let quizLoading = false;
 let answers = {}; // { socketId: choixIndex }
 const QUESTION_TIME = 15000; // 20 secondes
 const NEXT_QUESTION_TIME = 4000; // 3 secondes
@@ -66,8 +67,10 @@ function getLocalIP() {
 }
 
 const LOCAL_IP = getLocalIP();
-const PORT = 6969;
-const URL = `http://${LOCAL_IP}:${PORT}`;
+const PORT = Number(process.env.PORT || 6969);
+const PUBLIC_URL = process.env.PUBLIC_URL || `http://${LOCAL_IP}:${PORT}`;
+const LIBRETRANSLATE_URL =
+  process.env.LIBRETRANSLATE_URL || "http://192.168.0.234:5000";
 
 io.on("connection", (socket) => {
   socket.on("registerHost", () => {
@@ -98,46 +101,76 @@ io.on("connection", (socket) => {
 
   socket.on("startQuiz", async () => {
     if (!canControlQuiz(socket.id)) return;
+    if (quizLoading) return;
+    if (quizStarted) return;
 
-    quizStarted = true;
+    quizLoading = true;
+    io.emit("quizLoading", {
+      loading: true,
+      message: "Préparation du quiz...",
+    });
 
-    const res = await fetch(
-      `https://opentdb.com/api.php?amount=${QUESTIONS_PER_GAME}`,
-    );
+    try {
+      const res = await fetch(
+        `https://opentdb.com/api.php?amount=${QUESTIONS_PER_GAME}`,
+      );
 
-    const questions = await res.json();
+      const questions = await res.json();
 
-    const mappedQuestion = await Promise.all(
-      questions.results.map(async (question, index) => {
-        const {
-          correct_answer,
-          incorrect_answers,
-          question: qText,
-          ...rest
-        } = question;
+      console.log("questions", questions);
 
-        const translatedZh = await translateQuestion(qText, "zh");
-        const translatedFr = await translateQuestion(qText, "fr");
+      const mappedQuestion = await Promise.all(
+        questions.results.map(async (question, index) => {
+          const {
+            correct_answer,
+            incorrect_answers,
+            question: qText,
+            ...rest
+          } = question;
 
-        const choices = await shuffleChoices(correct_answer, incorrect_answers);
+          const translatedZh = await translateQuestion(qText, "zh");
+          const translatedFr = await translateQuestion(qText, "fr");
 
-        return {
-          id: index + 1,
-          ...rest,
-          ...choices,
-          question: {
-            fr: translatedFr,
-            zh: translatedZh,
-          },
-        };
-      }),
-    );
+          const choices = await shuffleChoices(
+            correct_answer,
+            incorrect_answers,
+          );
 
-    quiz = shuffle([...mappedQuestion]).slice(0, QUESTIONS_PER_GAME);
+          return {
+            id: index + 1,
+            ...rest,
+            ...choices,
+            question: {
+              fr: translatedFr,
+              zh: translatedZh,
+            },
+          };
+        }),
+      );
 
-    currentQuestionIndex = 0;
+      console.log("mappedQuestion", mappedQuestion);
 
-    sendQuestion(socket.id);
+      quiz = shuffle([...mappedQuestion]).slice(0, QUESTIONS_PER_GAME);
+
+      console.log("quiz", quiz);
+
+      resetPlayerScores();
+      currentQuestionIndex = 0;
+      quizStarted = true;
+
+      io.emit("playersList", Object.values(players));
+      sendQuestion(socket.id);
+    } catch (error) {
+      console.error("Erreur pendant la préparation du quiz :", error);
+      quizStarted = false;
+      currentQuestionIndex = -1;
+      io.emit("quizLoading", {
+        loading: false,
+        error: "Impossible de préparer le quiz. Réessaie dans un instant.",
+      });
+    } finally {
+      quizLoading = false;
+    }
   });
 
   socket.on("submitAnswer", ({ questionId, choiceIndex }) => {
@@ -190,7 +223,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/qrcode.png", async (req, res) => {
-  const qr = await QRCode.toBuffer(`${URL}/join`);
+  const qr = await QRCode.toBuffer(`${PUBLIC_URL}/join`);
   res.type("png").send(qr);
 });
 
@@ -199,7 +232,8 @@ app.get("/join", (req, res) => {
 });
 
 server.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on ${URL}`);
+  console.log(`Server running on ${PUBLIC_URL}`);
+  console.log(`LibreTranslate endpoint: ${LIBRETRANSLATE_URL}`);
 });
 
 function sendQuestion() {
@@ -253,11 +287,30 @@ function nextQuestion() {
   currentQuestionIndex++;
 
   if (currentQuestionIndex >= quiz.length) {
-    io.emit("quizEnded", Object.values(players));
+    finishQuiz();
     return;
   }
 
   sendQuestion();
+}
+
+function finishQuiz() {
+  quizStarted = false;
+  currentQuestionIndex = -1;
+  answers = {};
+  clearTimeout(questionTimer);
+  clearTimeout(nextQuestionTimer);
+
+  io.emit("quizEnded", {
+    players: Object.values(players),
+    mobileHostSocketId,
+  });
+}
+
+function resetPlayerScores() {
+  Object.values(players).forEach((player) => {
+    player.score = 0;
+  });
 }
 
 function canControlQuiz(socketId) {
@@ -265,7 +318,7 @@ function canControlQuiz(socketId) {
 }
 
 async function translateQuestion(q, lang) {
-  const res = await fetch("http://192.168.0.234:5000/translate", {
+  const res = await fetch(`${LIBRETRANSLATE_URL}/translate`, {
     method: "POST",
     body: JSON.stringify({
       q,
@@ -291,17 +344,16 @@ async function shuffleChoices(correct, incorrect) {
       zh: await translateQuestion(inc, "zh"),
     })),
   );
-  const choices = [
-    { fr: translateCorrectFr, zh: translateCorrectZh },
-    ...translateIncorrects,
-  ];
-
-  const correctIndex = choices.findIndex(
-    (choice) => choice.fr === correct.fr && choice.zh === correct.zh,
-  );
+  const choicesWithAnswer = shuffle([
+    { fr: translateCorrectFr, zh: translateCorrectZh, isCorrect: true },
+    ...translateIncorrects.map((choice) => ({
+      ...choice,
+      isCorrect: false,
+    })),
+  ]);
 
   return {
-    choices,
-    correct: correctIndex,
+    choices: choicesWithAnswer.map(({ isCorrect, ...choice }) => choice),
+    correct: choicesWithAnswer.findIndex((choice) => choice.isCorrect),
   };
 }

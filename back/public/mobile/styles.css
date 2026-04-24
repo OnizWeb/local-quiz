@@ -158,6 +158,14 @@ button:active {
   opacity: 0.75;
 }
 
+.loading-text::after {
+  content: "";
+  display: inline-block;
+  width: 1.4em;
+  text-align: left;
+  animation: loadingDots 1s steps(4, end) infinite;
+}
+
 /* Timer horizontal style game */
 .timer-bar {
   width: 100%;
@@ -256,6 +264,25 @@ button:active {
   text-shadow:
     3px 3px 0 #000,
     -1px -1px 0 #000;
+}
+
+@keyframes loadingDots {
+  0% {
+    content: "";
+  }
+
+  25% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  75%,
+  100% {
+    content: "...";
+  }
 }
 
 .ranking {

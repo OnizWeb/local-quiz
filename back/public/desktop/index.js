@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 const socket = io();
 
 function decodeHTML(str) {
-    const txt = document.createElement("textarea");
-    txt.innerHTML = str;
-    return txt.value;
+  const txt = document.createElement("textarea");
+  txt.innerHTML = str;
+  return txt.value;
 }
 
 const playersList = document.getElementById("playersList");
@@ -20,104 +20,131 @@ let totalPlayers = 0;
 socket.emit("registerHost");
 
 socket.on("playersList", (players) => {
-    playersList.innerHTML = "";
-    totalPlayers = players.length;
+  playersList.innerHTML = "";
+  totalPlayers = players.length;
 
-    players.forEach((player) => {
-        const li = document.createElement("li");
-        li.textContent = `👾 ${player.name} — ${player.score} pt`;
-        playersList.appendChild(li);
-    });
+  players.forEach((player) => {
+    const li = document.createElement("li");
+    li.textContent = `👾 ${player.name} — ${player.score} pt`;
+    playersList.appendChild(li);
+  });
+});
+
+socket.on("quizLoading", ({ loading, message, error }) => {
+  clearInterval(timerInterval);
+  choicesDiv.innerHTML = "";
+
+  if (loading) {
+    questionProgress.textContent = "Préparation";
+    questionText.innerHTML = `
+  <div class="q-fr loading-text">${message}</div>
+  <div class="q-zh">Les questions et traductions arrivent...</div>
+`;
+    answersInfo.textContent = "Chargement en cours";
+    timerFill.style.strokeDashoffset = 0;
+    document.getElementById("timerText").textContent = "...";
+    return;
+  }
+
+  if (error) {
+    questionProgress.textContent = "Erreur";
+    questionText.innerHTML = `<div class="q-fr">${error}</div>`;
+    answersInfo.textContent = "En attente du relancement";
+    document.getElementById("timerText").textContent = "0";
+  }
 });
 
 socket.on("newQuestion", (question) => {
-    questionProgress.textContent = `Question ${question.currentQuestionNumber} / ${question.totalQuestions}`;
-    questionText.innerHTML = `
+  questionProgress.textContent = `Question ${question.currentQuestionNumber} / ${question.totalQuestions}`;
+  questionText.innerHTML = `
   <div class="q-fr">${decodeHTML(question.question.fr)}</div>
   <div class="q-zh">${decodeHTML(question.question.zh)}</div>
 `;
-    choicesDiv.innerHTML = "";
-    answersInfo.textContent = `0 / ${totalPlayers} réponse(s) reçue(s)`;
+  choicesDiv.innerHTML = "";
+  answersInfo.textContent = `0 / ${totalPlayers} réponse(s) reçue(s)`;
 
-    console.log("nouvelle question", question);
+  console.log("nouvelle question", question);
 
-    const timerFill = document.getElementById("timerFill");
-    const timerText = document.getElementById("timerText");
+  const timerFill = document.getElementById("timerFill");
+  const timerText = document.getElementById("timerText");
 
-    const radius = 52;
-    const circumference = 2 * Math.PI * radius;
+  const radius = 52;
+  const circumference = 2 * Math.PI * radius;
 
-    timerFill.style.strokeDasharray = circumference;
-    timerFill.style.strokeDashoffset = 0;
+  timerFill.style.strokeDasharray = circumference;
+  timerFill.style.strokeDashoffset = 0;
 
-    // reset timer
-    clearInterval(timerInterval);
-    timerFill.style.strokeDashoffset = 0;
+  // reset timer
+  clearInterval(timerInterval);
+  timerFill.style.strokeDashoffset = 0;
 
-    let timeLeft = question.duration;
+  let timeLeft = question.duration;
 
-    timerInterval = setInterval(() => {
-        timeLeft -= 100;
+  timerInterval = setInterval(() => {
+    timeLeft -= 100;
 
-        const percent = Math.max(timeLeft / question.duration, 0);
-        const offset = circumference * (1 - percent);
+    const percent = Math.max(timeLeft / question.duration, 0);
+    const offset = circumference * (1 - percent);
 
-        timerFill.style.strokeDashoffset = offset;
-        timerText.textContent = Math.ceil(timeLeft / 1000);
+    timerFill.style.strokeDashoffset = offset;
+    timerText.textContent = Math.ceil(timeLeft / 1000);
 
-        if (timeLeft <= 3000) {
-            timerFill.style.stroke = "#ff2b2b";
-        } else {
-            timerFill.style.stroke = "#ffd21a";
-        }
+    if (timeLeft <= 3000) {
+      timerFill.style.stroke = "#ff2b2b";
+    } else {
+      timerFill.style.stroke = "#ffd21a";
+    }
 
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            timerText.textContent = "0";
-        }
-    }, 100);
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      timerText.textContent = "0";
+    }
+  }, 100);
 
-    question.choices.forEach((choice, index) => {
-        const div = document.createElement("div");
-        div.className = "choice";
-        div.dataset.index = index;
-        div.innerHTML = `
+  question.choices.forEach((choice, index) => {
+    const div = document.createElement("div");
+    div.className = "choice";
+    div.dataset.index = index;
+    div.innerHTML = `
     <div class="choice-fr">${decodeHTML(choice.fr)}</div>
   <div class="choice-zh">${decodeHTML(choice.zh)}</div>
   `;
-        choicesDiv.appendChild(div);
-    });
+    choicesDiv.appendChild(div);
+  });
 });
 
 socket.on("answersCount", ({ totalPlayers, totalAnswers }) => {
-    answersInfo.textContent = `${totalAnswers} / ${totalPlayers} réponse(s) reçue(s)`;
+  answersInfo.textContent = `${totalAnswers} / ${totalPlayers} réponse(s) reçue(s)`;
 });
 
 socket.on("revealAnswer", ({ correctIndex, players }) => {
-    clearInterval(timerInterval);
+  clearInterval(timerInterval);
 
-    document.querySelectorAll(".choice").forEach((el) => {
-        const i = Number(el.dataset.index);
+  document.querySelectorAll(".choice").forEach((el) => {
+    const i = Number(el.dataset.index);
 
-        if (i === correctIndex) {
-            el.classList.add("correct");
-        } else {
-            el.classList.add("wrong");
-        }
-    });
+    if (i === correctIndex) {
+      el.classList.add("correct");
+    } else {
+      el.classList.add("wrong");
+    }
+  });
 });
 
-socket.on("quizEnded", (players) => {
-    questionProgress.textContent = `Terminé`;
-    questionText.textContent = "Quiz terminé !";
-    choicesDiv.innerHTML = "";
+socket.on("quizEnded", ({ players }) => {
+  questionProgress.textContent = `Terminé`;
+  questionText.textContent = "Quiz terminé !";
+  choicesDiv.innerHTML = "";
 
-    const classement = [...players].sort((a, b) => b.score - a.score);
-    answersInfo.innerHTML =
-        "<strong>Classement final</strong><br><br>" +
-        classement
-            .map((p, i) => `${i + 1}. ${p.name} — ${p.score} pt`)
-            .join("<br>");
+  const classement = [...players].sort((a, b) => b.score - a.score);
+  answersInfo.innerHTML =
+    "<strong>Classement final</strong><br><br>" +
+    classement
+      .map((p, i) => `${i + 1}. ${p.name} — ${p.score} pt`)
+      .join("<br>");
 
+  const startBtn = document.getElementById("startBtn");
+  if (startBtn) {
     startBtn.style.display = "inline-block";
+  }
 });
